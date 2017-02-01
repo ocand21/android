@@ -1,6 +1,7 @@
 package oki.candra.javaclass;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by D2J-00 on 31/01/2017.
@@ -36,10 +37,39 @@ public class Transaksi {
         }
         text += "\n------------------------------------------------\n";
         text += " Total pembelian: "+totalTransaksi()+"\n";
+        text += " Rata-Rata pembelian: "+averageTransaksi()+"\n";
         text += "\n------------------------------------------------\n";
 
         return text;
 
+    }
+
+    public double averageTransaksi()
+    {
+        double hasil = 0;
+        for(int i=0; i<ListBarang.size();i++)
+        {
+            hasil += ListBarang.get(i).getHarga();
+        }
+        hasil = hasil/ListBarang.size();
+        return hasil;
+    }
+
+    public String maxBarang()
+    {
+        Barang max;
+        max = ListBarang.get(0);
+        for(int i=0;i<ListBarang.size();i++)
+        {
+            if(ListBarang.get(i).getHarga()> max.getHarga())
+            {
+                max = ListBarang.get(i);
+            }
+        }
+
+        String namaBarang = max.getNama();
+        String text = "Barang termahal pada transaksi adalah "+namaBarang;
+        return text;
     }
 
 }

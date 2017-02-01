@@ -20,10 +20,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         initBarang();
-        showString += arrBarang[5].toString();
-        addSeparator();
-        showString += arrBarang[0].toString();
-        addSeparator();
+        //showString += arrBarang[5].toString();
+        //addSeparator();
+        //showString += arrBarang[0].toString();
+        //addSeparator();
+
+        Transaksi trans1 = new Transaksi();
+        trans1.addBarang(arrBarang[3]);
+        trans1.addBarang(arrBarang[7]);
+        trans1.addBarang(arrBarang[4]);
+        showString += trans1.printTransaksi();
+            trans1.averageTransaksi();
+        showString += "\n"+trans1.maxBarang();
+
         showText.setText(showString);
     }
 
