@@ -13,6 +13,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:text="Angka 1" />
     <EditText
         android:id="@+id/num1"
@@ -27,35 +29,51 @@
             android:id="@+id/plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:text="+"/>
         <RadioButton
             android:id="@+id/minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:text="-"/>
         <RadioButton
             android:id="@+id/kali"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:text="x"/>
         <RadioButton
             android:id="@+id/bagi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:text="/"/>
 
     </RadioGroup>
     <TextView
         android:text="Angka 2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
     <EditText
         android:id="@+id/num2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
         android:text="Hitung"
         android:onClick="calculate"
         />
