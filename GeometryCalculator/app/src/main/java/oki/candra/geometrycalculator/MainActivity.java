@@ -29,11 +29,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         EditText input1 = (EditText) findViewById(R.id.input1);
         EditText input2 = (EditText) findViewById(R.id.input2);
         Spinner spinner = (Spinner) findViewById(R.id.geometry);
+        double inp2=0, inp1=0;
+
 
         String operator = spinner.getSelectedItem().toString();
         String hasil = "";
-        double inp1 = Double.parseDouble(input1.getText().toString());
-        double inp2 = Double.parseDouble(input2.getText().toString());
+        inp1 = Double.parseDouble(input1.getText().toString());
+        if(input2.isEnabled()){
+
+             inp2 = Double.parseDouble(input2.getText().toString());
+        }
 
         if(operator.equalsIgnoreCase("Lingkaran")){
             hasil = "Luas dari Lingkaran adalah "+(Math.PI*(inp1*inp1))+"\n";
@@ -71,7 +76,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             text1.setText("Jari-Jari");
             input2.setEnabled(false);
             text2.setText("");
-            input2.setEnabled(false);
         }
         else if(operator.equalsIgnoreCase("Segitiga"))
         {
