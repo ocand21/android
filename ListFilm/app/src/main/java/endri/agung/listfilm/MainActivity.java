@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 public void formadd(View view)
 {
     Intent intent = new Intent(this, TambahList.class);
