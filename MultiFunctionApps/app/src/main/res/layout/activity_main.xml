@@ -50,4 +50,13 @@
         android:textStyle="bold"
         android:text="Buka Peta"
         android:onClick="openMap"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:text="Kirim Email"
+        android:onClick="openMap"/>
+
+
 </LinearLayout>

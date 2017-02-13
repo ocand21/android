@@ -41,4 +41,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA, "map");
         startActivity(intent);
     }
+    public void openMail(View view){
+        Intent intent = new Intent(this, IntentExecutor.class);
+        intent.putExtra(EXTRA, "mail");
+        startActivity(intent);
+    }
 }
