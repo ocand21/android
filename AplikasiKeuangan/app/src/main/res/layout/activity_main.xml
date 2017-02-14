@@ -11,11 +11,11 @@
     tools:context="oki.candra.aplikasikeuangan.MainActivity">
 
     <TextView
-        android:id="@+id/main"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selamat Datang di Aplikasi Keuangan" />
+        android:id="@+id/txt_saldo"
+        android:textSize="25dp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:layout_marginTop="20dp"
@@ -26,8 +26,8 @@
         android:layout_height="wrap_content"
         android:onClick="addTransaksi"/>
 
-    <TextView
-        android:id="@+id/txt_show"
+    <ListView
+        android:id="@+id/list_transaksi"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
